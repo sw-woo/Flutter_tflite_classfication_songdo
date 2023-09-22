@@ -63,7 +63,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   //TODO 다운 받은 모델 경로 지정 및 옵션 조절
   createLabeler() async {
-    final modelPath = await getModelPath('assets/ml/flower_int8.tflite');
+    final modelPath =
+        await getModelPath('assets/ml/dog_conjunctivitis_classfication.tflite');
     final options = LocalLabelerOptions(
       confidenceThreshold: 0.1, //분류 정확도 기준치 10%이상 정확도만 나타나게 하는 파라메터
       modelPath: modelPath,
